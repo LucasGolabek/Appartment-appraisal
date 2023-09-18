@@ -1,0 +1,17 @@
+version: "3.4"
+   
+services:
+  web:
+    build: ./apartment_appraisal
+    command: python ./apartment_appraisal/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+  front:
+    build: ./PriceEstimator/price_estimator
+    command: npm start
+    volumes:
+      - .:/frontend/price_estimator
+    ports:
+      - "3000:3000"

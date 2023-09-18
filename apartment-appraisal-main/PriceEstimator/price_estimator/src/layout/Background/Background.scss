@@ -1,0 +1,14 @@
+.backgroundContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
